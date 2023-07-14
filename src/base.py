@@ -20,16 +20,20 @@ from __future__ import annotations
 from copy import copy
 from typing import TextIO, Optional, Any
 from collections.abc import Iterable, Hashable
-
+from dataclasses import dataclass
 import logging
 
 Objective = Any
 
 
+@dataclass
 class Component:
+    node: int
+    direction: int
+
     @property
     def cid(self) -> Hashable:
-        raise NotImplementedError
+        return self.node, self.direction
 
 
 class LocalMove:
@@ -57,9 +61,9 @@ class Solution:
         """
         str = ""
         for i in range(len(self.containers)):
-            str += self.containers[i] + " " + self.directions[i] + "\n"
+            str += f"{self.containers[i]+1} {self.directions[i]}\n"
 
-        return str
+        return str.rstrip()
 
     def copy(self) -> Solution:
         """
@@ -89,6 +93,8 @@ class Solution:
         if len(self.not_picked) > 0:
             return None
 
+        return self.obj_value + self.problem.container_to_plant[self.directions[-1]][self.containers[-1]]
+
         obj_value = 0
         for idx in range(len(self.containers)):
             # add the route from the depot to the first container
@@ -104,8 +110,6 @@ class Solution:
 
         # add the route from the last container to the plant
         obj_value += self.problem.container_to_plant[self.directions[-1]][self.containers[-1]]
-
-        return obj_value
 
     def lower_bound(self) -> Optional[Objective]:
         """
@@ -180,7 +184,32 @@ class Solution:
         Return the next component to be added based on some heuristic
         rule.
         """
-        raise NotImplementedError
+
+        if len(self.not_picked) == 0:
+            return None
+
+        candidates = []
+        if len(self.containers) == 0:
+            candidates.append(self.problem.depot_to_container[0])
+            candidates.append(self.problem.depot_to_container[1])
+        else:
+            dir_idx_0 = int(str(self.directions[-1]) + str(0), 2)
+            dir_idx_1 = int(str(self.directions[-1]) + str(1), 2)
+            candidates.append(self.problem.container_to_container[dir_idx_0][self.containers[-1]])
+            candidates.append(self.problem.container_to_container[dir_idx_1][self.containers[-1]])
+
+        best_candidate = {"val": candidates[0][0], "idx": 0, "direction": 0}
+        for idx in self.not_picked:
+            if candidates[0][idx] < best_candidate["val"]:
+                best_candidate["val"] = candidates[0][idx]
+                best_candidate["idx"] = idx
+                best_candidate["direction"] = 0
+            if candidates[1][idx] < best_candidate["val"]:
+                best_candidate["val"] = candidates[1][idx]
+                best_candidate["idx"] = idx
+                best_candidate["direction"] = 1
+
+        return Component(best_candidate["idx"], best_candidate["direction"])
 
     def add(self, component: Component) -> None:
         """
@@ -189,7 +218,18 @@ class Solution:
         Note: this invalidates any previously generated components and
         local moves.
         """
-        raise NotImplementedError
+        if len(self.containers) == 0:
+            self.obj_value += self.problem.depot_to_container[component.direction][component.node]
+        else:
+            # construct the direction index by concat the directions to a binary string a read it in dec
+            dir_idx = int(str(self.directions[-1]) + str(component.direction), 2)
+            self.obj_value += self.problem.container_to_container[dir_idx][self.containers[-1]][component.node]
+
+        self.containers.append(component.node)
+        self.directions.append(component.direction)
+
+        self.picked.add(component.node)
+        self.not_picked.remove(component.node)
 
     def step(self, lmove: LocalMove) -> None:
         """
