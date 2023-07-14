@@ -237,6 +237,7 @@ class Solution:
         self.picked.add(component.node)
         self.not_picked.remove(component.node)
 
+
     def step(self, lmove: LocalMove) -> None:
         """
         Apply a local move to the solution.
