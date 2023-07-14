@@ -61,7 +61,7 @@ class Solution:
         """
         str = ""
         for i in range(len(self.containers)):
-            str += f"{self.containers[i]+1} {self.directions[i]}\n"
+            str += f"{self.containers[i] + 1} {self.directions[i]}\n"
 
         return str.rstrip()
 
@@ -72,25 +72,22 @@ class Solution:
         Note: changes to the copy must not affect the original
         solution. However, this does not need to be a deepcopy.
         """
-        return self.__class__(self.problem,
-                              copy(self.containers),
-                              copy(self.picked),
-                              copy(self.not_picked),
+        return self.__class__(self.problem, copy(self.containers), copy(self.picked), copy(self.not_picked),
                               self.obj_value)
 
-     def is_feasible(self) -> bool:
+    def is_feasible(self) -> bool:
         """
         Return whether the solution is feasible or not
         """
-        #Constraint 1: check if all containers are included in the solution (or picked)
-        unique_containers = list(set(self.containers)) #remove duplicates
-        
+        # Constraint 1: check if all containers are included in the solution (or picked)
+        unique_containers = list(set(self.containers))  # remove duplicates
+
         if (len(unique_containers) != self.problem.n):
             return False
         else:
-            #check other constraints
+            # check other constraints
             return True
-                
+
         raise NotImplementedError
 
     def objective(self) -> Optional[Objective]:
