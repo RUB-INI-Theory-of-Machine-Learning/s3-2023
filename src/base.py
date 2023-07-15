@@ -22,6 +22,7 @@ from typing import TextIO, Optional, Any
 from collections.abc import Iterable, Hashable
 from dataclasses import dataclass
 import logging
+import numpy as np
 
 Objective = Any
 
@@ -82,13 +83,11 @@ class Solution:
         # Constraint 1: check if all containers are included in the solution (or picked)
         unique_containers = list(set(self.containers))  # remove duplicates
 
-        if (len(unique_containers) != self.problem.n):
+        if len(unique_containers) != self.problem.n:
             return False
         else:
             # check other constraints
             return True
-
-        raise NotImplementedError
 
     def objective(self) -> Optional[Objective]:
         """
@@ -99,56 +98,43 @@ class Solution:
         if len(self.not_picked) > 0:
             return None
 
+        # add route from last container to plant and return
         return self.obj_value + self.problem.container_to_plant[self.directions[-1]][self.containers[-1]]
-
-        obj_value = 0
-        for idx in range(len(self.containers)):
-            # add the route from the depot to the first container
-            if idx == 0:
-                obj_value += self.problem.depot_to_container[self.directions[idx]][self.containers[idx]]
-
-            # add route between containers
-            else:
-                # construct the direction index by concat the directions to a binary string a read it in dec
-                dir_idx = int(str(self.directions[idx - 1]) + str(self.directions[idx]), 2)
-                obj_value += self.problem.container_to_container[dir_idx][self.containers[idx - 1]][
-                    self.containers[idx]]
-
-        # add the route from the last container to the plant
-        obj_value += self.problem.container_to_plant[self.directions[-1]][self.containers[-1]]
 
     def lower_bound(self) -> Optional[Objective]:
         """
         Return the lower bound value for this solution if defined,
         otherwise return None
         """
+        if len(self.not_picked) == 0:
+            return None
+
+        # current obj_value
+        obj_value = self.obj_value
+
+        # add the minimal amount of connections to be made (including the plant)
+        obj_value += self.get_minimal_connections(self.not_picked)
+
+        return obj_value
+
+    def get_minimal_connections(self, containers) -> int:
         obj_value = 0
-        for idx in range(len(self.containers)):
-            # add the route from the depot to the first container
-            if idx == 0:
-                obj_value += self.problem.depot_to_container[self.directions[idx]][self.containers[idx]]
 
-            # add route between containers
-            else:
-                # construct the direction index by concat the directions to a binary string a read it in dec
-                dir_idx = int(str(self.directions[idx - 1]) + str(self.directions[idx]), 2)
-                obj_value += self.problem.container_to_container[dir_idx][self.containers[idx - 1]][
-                    self.containers[idx]]
-
-        for dest_con in self.not_picked:
+        for dest_con in containers:
             options = []
-            for dep_con in self.not_picked:
+            for dep_con in containers:
                 for dir_idx in range(4):
                     if dep_con != dest_con:
                         options.append(self.problem.container_to_container[dir_idx][dep_con][dest_con])
 
             # add the minimum value
-            obj_value += min(options)
+            if len(options) > 0:
+                obj_value += min(options)
 
         # add the route from the last container to the plant
         options = []
-        for dep_con in self.not_picked:
-            for dir_idx in range(4):
+        for dep_con in containers:
+            for dir_idx in range(2):
                 options.append(self.problem.container_to_plant[dir_idx][dep_con])
         obj_value += min(options)
 
@@ -159,7 +145,9 @@ class Solution:
         Return an iterable (generator, iterator, or iterable object)
         over all components that can be added to the solution
         """
-        raise NotImplementedError
+        for container in self.not_picked:
+            for direction in range(2):
+                yield Component(container, direction)
 
     def local_moves(self) -> Iterable[LocalMove]:
         """
@@ -226,15 +214,18 @@ class Solution:
         if len(self.containers) == 0:
             self.obj_value += self.problem.depot_to_container[component.direction][component.node]
         else:
-            # construct the direction index by concat the directions to a binary string a read it in dec
-            dir_idx = int(str(self.directions[-1]) + str(component.direction), 2)
-            self.obj_value += self.problem.container_to_container[dir_idx][self.containers[-1]][component.node]
+            self.obj_value += self.obj_value_increment(Component(self.containers[-1], self.directions[-1]), component)
 
         self.containers.append(component.node)
         self.directions.append(component.direction)
 
         self.picked.add(component.node)
         self.not_picked.remove(component.node)
+
+    def obj_value_increment(self, last_component, new_component):
+        # construct the direction index by concat the directions to a binary string a read it in dec
+        dir_idx = int(str(last_component.direction) + str(new_component.direction), 2)
+        return self.problem.container_to_container[dir_idx][last_component.node][new_component.node]
 
     def step(self, lmove: LocalMove) -> None:
         """
@@ -259,7 +250,20 @@ class Solution:
         component. If the lower bound is not defined after adding the
         component return None.
         """
-        raise NotImplementedError
+        if len(self.not_picked) == 1:
+            return 0
+
+        if len(self.containers) == 0:
+            new_obj_value = self.problem.depot_to_container[component.direction][component.node]
+        else:
+            new_obj_value = self.obj_value + self.obj_value_increment(
+                Component(self.containers[-1], self.directions[-1]), component)
+
+        self.not_picked.remove(component.node)
+        new_obj_value += self.get_minimal_connections(self.not_picked)
+        self.not_picked.add(component.node)
+
+        return new_obj_value - self.lower_bound()
 
     def perturb(self, ks: int) -> None:
         """
@@ -276,8 +280,8 @@ class Solution:
 
 
 class Problem:
-    def __init__(self, n: int, depot_to_container: list, container_to_plant: list,
-                 container_to_container: list) -> None:
+    def __init__(self, n: int, depot_to_container: np.ndarray, container_to_plant: np.ndarray,
+                 container_to_container: np.ndarray) -> None:
         self.n = n
         self.depot_to_container = depot_to_container
         self.container_to_plant = container_to_plant
@@ -289,12 +293,13 @@ class Problem:
         """
         Create a problem from a text I/O source `f`
         """
-        depot_to_container = [[], []]
-        container_to_plant = [[], []]
-        # index - combination: 0 - 00, 1 - 01, 2 - 10, 3 - 11
-        container_to_container = [[], [], [], []]
-
         n = int(f.readline())
+
+        depot_to_container = np.empty([2, n])
+        container_to_plant = np.empty([2, n])
+        # index - combination: 0 - 00, 1 - 01, 2 - 10, 3 - 11
+        container_to_container = np.empty([4, n, n])
+
         for idx in range(1, 5 + 4 * n):
             line = f.readline().strip()  # Remove leading/trailing whitespaces
             elements = [int(x) for x in line.split()]  # Split line by spaces
@@ -307,13 +312,13 @@ class Problem:
             elif idx == 4:
                 container_to_plant[1] = elements
             elif idx < n + 5:
-                container_to_container[0].append(elements)
+                container_to_container[0][idx - 5] = elements
             elif idx < 2 * n + 5:
-                container_to_container[1].append(elements)
+                container_to_container[1][idx - n - 5] = elements
             elif idx < 3 * n + 5:
-                container_to_container[3].append(elements)
+                container_to_container[3][idx - 2*n - 5] = elements
             else:
-                container_to_container[2].append(elements)
+                container_to_container[2][idx - 3*n - 5] = elements
 
         return cls(n, depot_to_container, container_to_plant, container_to_container)
 
