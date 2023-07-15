@@ -190,7 +190,6 @@ class Solution:
         Return the next component to be added based on some heuristic
         rule.
         """
-
         if len(self.not_picked) == 0:
             return None
 
@@ -204,7 +203,7 @@ class Solution:
             candidates.append(self.problem.container_to_container[dir_idx_0][self.containers[-1]])
             candidates.append(self.problem.container_to_container[dir_idx_1][self.containers[-1]])
 
-        best_candidate = {"val": candidates[0][0], "idx": 0, "direction": 0}
+        best_candidate = {"val": max(candidates[0] + candidates[1]), "idx": None, "direction": None}
         for idx in self.not_picked:
             if candidates[0][idx] < best_candidate["val"]:
                 best_candidate["val"] = candidates[0][idx]
@@ -236,7 +235,6 @@ class Solution:
 
         self.picked.add(component.node)
         self.not_picked.remove(component.node)
-
 
     def step(self, lmove: LocalMove) -> None:
         """
