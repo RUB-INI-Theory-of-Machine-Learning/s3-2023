@@ -73,8 +73,14 @@ class Solution:
         Note: changes to the copy must not affect the original
         solution. However, this does not need to be a deepcopy.
         """
-        return self.__class__(self.problem, copy(self.containers), copy(self.picked), copy(self.not_picked),
-                              self.obj_value)
+        return self.__class__(
+            self.problem,
+            copy(self.containers),
+            copy(self.directions),
+            copy(self.picked),
+            copy(self.not_picked),
+            self.obj_value
+        )
 
     def is_feasible(self) -> bool:
         """
