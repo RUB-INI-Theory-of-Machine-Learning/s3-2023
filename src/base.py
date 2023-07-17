@@ -282,7 +282,8 @@ class Solution:
         """
         Returns an iterable to the components of a solution
         """
-        raise NotImplementedError
+        for idx in range(self.problem.n):
+            yield Component(self.containers[idx], self.directions[idx])
 
 
 class Problem:
