@@ -1,0 +1,10 @@
+INFO;2023-07-17 16:51:07,009;New best solution found (iteration 1): 3794.0
+INFO;2023-07-17 16:51:07,158;New best solution found (iteration 1): 2698.0
+INFO;2023-07-17 16:51:07,445;New best solution found (iteration 1): 2596.0
+INFO;2023-07-17 16:51:08,016;New best solution found (iteration 1): 2364.0
+INFO;2023-07-17 16:51:21,090;New best solution found (iteration 2): 2276.0
+INFO;2023-07-17 16:51:21,663;New best solution found (iteration 2): 2246.0
+INFO;2023-07-17 16:51:30,790;New best solution found (iteration 2): 2217.0
+INFO;2023-07-17 16:52:46,805;Number of iterations: 8
+INFO;2023-07-17 16:52:46,806;Objective: 2217.000
+INFO;2023-07-17 16:52:46,806;Elapsed solving time: 100.0075
