@@ -1,0 +1,5 @@
+INFO;2023-07-17 15:30:10,566;Component added, lb increment: -56.0
+INFO;2023-07-17 15:30:10,566;Component added, lb increment: -29.0
+INFO;2023-07-17 15:30:10,566;Component added, lb increment: 0
+INFO;2023-07-17 15:30:10,566;Objective: 430.000
+INFO;2023-07-17 15:30:10,566;Elapsed solving time: 0.0003

@@ -1,0 +1,2 @@
+INFO;2023-07-17 15:30:10,652;Objective: 222.000
+INFO;2023-07-17 15:30:10,652;Elapsed solving time: 0.0000

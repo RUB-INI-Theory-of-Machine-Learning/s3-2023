@@ -1,0 +1,6 @@
+INFO;2023-07-17 15:30:33,149;New best solution found (iteration 1): 3394.0
+INFO;2023-07-17 15:30:33,438;New best solution found (iteration 1): 2791.0
+INFO;2023-07-17 15:30:35,714;New best solution found (iteration 1): 2589.0
+INFO;2023-07-17 15:30:38,068;Number of iterations: 1
+INFO;2023-07-17 15:30:38,069;Objective: 2589.000
+INFO;2023-07-17 15:30:38,069;Elapsed solving time: 5.1250
