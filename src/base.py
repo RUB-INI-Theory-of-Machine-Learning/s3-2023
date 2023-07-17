@@ -37,8 +37,12 @@ class Component:
         return self.node, self.direction
 
 
+@dataclass
 class LocalMove:
-    ...
+    i: int
+    j: int
+    i_dir: int
+    j_dir: int
 
 
 class Solution:
@@ -160,7 +164,17 @@ class Solution:
         Return an iterable (generator, iterator, or iterable object)
         over all local moves that can be applied to the solution
         """
-        raise NotImplementedError
+        for idx_1 in range(self.problem.n):
+            for idx_2 in range(idx_1, self.problem.n):
+                for dir_idx in range(4):
+                    if dir_idx == 0:
+                        yield LocalMove(idx_1, idx_2, 0, 0)
+                    elif dir_idx == 1:
+                        yield LocalMove(idx_1, idx_2, 0, 1)
+                    elif dir_idx == 2:
+                        yield LocalMove(idx_1, idx_2, 1, 0)
+                    else:
+                        yield LocalMove(idx_1, idx_2, 1, 1)
 
     def random_local_move(self) -> Optional[LocalMove]:
         """
@@ -220,7 +234,7 @@ class Solution:
         if len(self.containers) == 0:
             self.obj_value += self.problem.depot_to_container[component.direction][component.node]
         else:
-            self.obj_value += self.obj_value_increment(Component(self.containers[-1], self.directions[-1]), component)
+            self.obj_value += self.connection_cost(Component(self.containers[-1], self.directions[-1]), component)
 
         self.containers.append(component.node)
         self.directions.append(component.direction)
@@ -228,7 +242,7 @@ class Solution:
         self.picked.add(component.node)
         self.not_picked.remove(component.node)
 
-    def obj_value_increment(self, last_component, new_component):
+    def connection_cost(self, last_component, new_component):
         # construct the direction index by concat the directions to a binary string a read it in dec
         dir_idx = int(str(last_component.direction) + str(new_component.direction), 2)
         return self.problem.container_to_container[dir_idx][last_component.node][new_component.node]
@@ -248,7 +262,45 @@ class Solution:
         local move. If the objective value is not defined after
         applying the local move return None.
         """
-        raise NotImplementedError
+        pc_1 = self.containers[lmove.i - 1]
+        pd_1 = self.directions[lmove.i - 1]
+        cc_1 = self.containers[lmove.i]
+        cd_1 = self.directions[lmove.i]
+        fc_1 = self.containers[lmove.i + 1]
+        fd_1 = self.directions[lmove.i + 1]
+
+        pc_2 = self.containers[lmove.j - 1]
+        pd_2 = self.directions[lmove.j - 1]
+        cc_2 = self.containers[lmove.j]
+        cd_2 = self.directions[lmove.j]
+        fc_2 = self.containers[lmove.j + 1]
+        fd_2 = self.directions[lmove.j + 1]
+
+        obj_value_old = 0
+        obj_value_old += self.connection_cost(Component(pc_1, pd_1), Component(cc_1, cd_1))
+        obj_value_old += self.connection_cost(Component(cc_1, cd_1), Component(fc_1, fd_1))
+        obj_value_old += self.connection_cost(Component(pc_2, pd_2), Component(cc_2, cd_2))
+        obj_value_old += self.connection_cost(Component(cc_2, cd_2), Component(fc_2, fd_2))
+
+
+
+        self.connection_cost(Component(pc_1, pd_1), Component(cc_1, cd_1))
+        self.connection_cost(Component(pc_1, pd_1), Component(cc_1, cd_1))
+        self.connection_cost(Component(self.containers[lmove.i], self.directions[lmove.i]),
+                             Component(lmove.i + 1, lmove.i + 1))
+        self.connection_cost(Component(self.containers[lmove.j - 1], self.directions[lmove.j - 1]),
+                             Component(lmove.j, lmove.j))
+        self.connection_cost(Component(self.containers[lmove.j], self.directions[lmove.j]),
+                             Component(lmove.j + 1, lmove.j + 1))
+
+        self.connection_cost(Component(self.containers[lmove.i - 1], self.directions[lmove.i - 1]),
+                             Component(lmove.j, lmove.i))
+        self.connection_cost(Component(self.containers[lmove.i], self.directions[lmove.i]),
+                             Component(lmove.i + 1, lmove.i + 1))
+        self.connection_cost(Component(self.containers[lmove.j - 1], self.directions[lmove.j - 1]),
+                             Component(lmove.j, lmove.j))
+        self.connection_cost(Component(self.containers[lmove.j], self.directions[lmove.j]),
+                             Component(lmove.j + 1, lmove.j + 1))
 
     def lower_bound_incr_add(self, component: Component) -> Optional[Objective]:
         """
@@ -262,7 +314,7 @@ class Solution:
         if len(self.containers) == 0:
             new_obj_value = self.problem.depot_to_container[component.direction][component.node]
         else:
-            new_obj_value = self.obj_value + self.obj_value_increment(
+            new_obj_value = self.obj_value + self.connection_cost(
                 Component(self.containers[-1], self.directions[-1]), component)
 
         self.not_picked.remove(component.node)
@@ -323,9 +375,9 @@ class Problem:
             elif idx < 2 * n + 5:
                 container_to_container[1][idx - n - 5] = elements
             elif idx < 3 * n + 5:
-                container_to_container[3][idx - 2*n - 5] = elements
+                container_to_container[3][idx - 2 * n - 5] = elements
             else:
-                container_to_container[2][idx - 3*n - 5] = elements
+                container_to_container[2][idx - 3 * n - 5] = elements
 
         return cls(n, depot_to_container, container_to_plant, container_to_container)
 
