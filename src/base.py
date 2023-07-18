@@ -22,6 +22,7 @@ from typing import TextIO, Optional, Any
 from collections.abc import Iterable, Hashable
 from dataclasses import dataclass
 import logging
+import random
 import numpy as np
 
 Objective = Any
@@ -183,7 +184,8 @@ class Solution:
         Note: repeated calls to this method may return the same
         local move.
         """
-        raise NotImplementedError
+        for move in self.random_local_moves_wor():
+            return move
 
     def random_local_moves_wor(self) -> Iterable[LocalMove]:
         """
@@ -191,7 +193,23 @@ class Solution:
         over all local moves (in random order) that can be applied to
         the solution.
         """
-        raise NotImplementedError
+        range_1 = list(range(self.problem.n))
+        random.shuffle(range_1)
+        for idx_1 in range_1:
+            range_2 = list(range(idx_1, self.problem.n))
+            random.shuffle(range_2)
+            for idx_2 in range_2:
+                range_dir = list(range(4))
+                random.shuffle(range_dir)
+                for dir_idx in range_dir:
+                    if dir_idx == 0:
+                        yield LocalMove(idx_1, idx_2, 0, 0)
+                    elif dir_idx == 1:
+                        yield LocalMove(idx_1, idx_2, 0, 1)
+                    elif dir_idx == 2:
+                        yield LocalMove(idx_1, idx_2, 1, 0)
+                    else:
+                        yield LocalMove(idx_1, idx_2, 1, 1)
 
     def heuristic_add_move(self) -> Optional[Component]:
         """
@@ -272,19 +290,19 @@ class Solution:
         local move. If the objective value is not defined after
         applying the local move return None.
         """
-        pc_1 = self.containers[lmove.i - 1]
-        pd_1 = self.directions[lmove.i - 1]
+        pc_1 = self.containers[lmove.i - 1] if lmove.i > 0 else -1
+        pd_1 = self.directions[lmove.i - 1] if lmove.i > 0 else None
         cc_1 = self.containers[lmove.i]
         cd_1 = self.directions[lmove.i]
-        fc_1 = self.containers[lmove.i + 1]
-        fd_1 = self.directions[lmove.i + 1]
+        fc_1 = self.containers[lmove.i + 1] if lmove.i < self.problem.n - 1 else self.problem.n
+        fd_1 = self.directions[lmove.i + 1] if lmove.i < self.problem.n - 1 else None
 
-        pc_2 = self.containers[lmove.j - 1]
-        pd_2 = self.directions[lmove.j - 1]
+        pc_2 = self.containers[lmove.j - 1] if lmove.j > 0 else -1
+        pd_2 = self.directions[lmove.j - 1] if lmove.j > 0 else None
         cc_2 = self.containers[lmove.j]
         cd_2 = self.directions[lmove.j]
-        fc_2 = self.containers[lmove.j + 1]
-        fd_2 = self.directions[lmove.j + 1]
+        fc_2 = self.containers[lmove.j + 1] if lmove.j < self.problem.n - 1 else self.problem.n
+        fd_2 = self.directions[lmove.j + 1] if lmove.j < self.problem.n - 1 else None
 
         obj_value_old = 0
         obj_value_old += self.connection_cost(Component(pc_1, pd_1), Component(cc_1, cd_1))
@@ -299,7 +317,6 @@ class Solution:
         obj_value_new += self.connection_cost(Component(cc_1, lmove.i_dir), Component(fc_2, fd_2))
 
         return obj_value_new - obj_value_old
-
 
     def lower_bound_incr_add(self, component: Component) -> Optional[Objective]:
         """
@@ -327,7 +344,8 @@ class Solution:
         Perturb the solution in place. The amount of perturbation is
         controlled by the parameter ks (kick strength)
         """
-        raise NotImplementedError
+        for i in range(ks):
+            self.step(self.random_local_move())
 
     def components(self) -> Iterable[Component]:
         """
