@@ -1,0 +1,228 @@
+INFO;2023-07-18 16:52:17,599;Component added, lb increment: 12.0
+INFO;2023-07-18 16:52:17,992;Component added, lb increment: 99.0
+INFO;2023-07-18 16:52:18,359;Component added, lb increment: 115.0
+INFO;2023-07-18 16:52:18,712;Component added, lb increment: 134.0
+INFO;2023-07-18 16:52:19,042;Component added, lb increment: 129.0
+INFO;2023-07-18 16:52:19,351;Component added, lb increment: 177.0
+INFO;2023-07-18 16:52:19,645;Component added, lb increment: 36.0
+INFO;2023-07-18 16:52:19,908;Component added, lb increment: 46.0
+INFO;2023-07-18 16:52:20,153;Component added, lb increment: 75.0
+INFO;2023-07-18 16:52:20,382;Component added, lb increment: 41.0
+INFO;2023-07-18 16:52:20,598;Component added, lb increment: 44.0
+INFO;2023-07-18 16:52:20,799;Component added, lb increment: 62.0
+INFO;2023-07-18 16:52:20,985;Component added, lb increment: 52.0
+INFO;2023-07-18 16:52:21,161;Component added, lb increment: 27.0
+INFO;2023-07-18 16:52:21,324;Component added, lb increment: 14.0
+INFO;2023-07-18 16:52:21,469;Component added, lb increment: 60.0
+INFO;2023-07-18 16:52:21,602;Component added, lb increment: 139.0
+INFO;2023-07-18 16:52:21,721;Component added, lb increment: 63.0
+INFO;2023-07-18 16:52:21,830;Component added, lb increment: 116.0
+INFO;2023-07-18 16:52:21,929;Component added, lb increment: 17.0
+INFO;2023-07-18 16:52:22,018;Component added, lb increment: 82.0
+INFO;2023-07-18 16:52:22,098;Component added, lb increment: 69.0
+INFO;2023-07-18 16:52:22,171;Component added, lb increment: 84.0
+INFO;2023-07-18 16:52:22,236;Component added, lb increment: 18.0
+INFO;2023-07-18 16:52:22,295;Component added, lb increment: 40.0
+INFO;2023-07-18 16:52:22,347;Component added, lb increment: 72.0
+INFO;2023-07-18 16:52:22,392;Component added, lb increment: 45.0
+INFO;2023-07-18 16:52:22,432;Component added, lb increment: 36.0
+INFO;2023-07-18 16:52:22,468;Component added, lb increment: 228.0
+INFO;2023-07-18 16:52:22,498;Component added, lb increment: 115.0
+INFO;2023-07-18 16:52:22,524;Component added, lb increment: 80.0
+INFO;2023-07-18 16:52:22,546;Component added, lb increment: 40.0
+INFO;2023-07-18 16:52:22,566;Component added, lb increment: 157.0
+INFO;2023-07-18 16:52:22,582;Component added, lb increment: 69.0
+INFO;2023-07-18 16:52:22,597;Component added, lb increment: 48.0
+INFO;2023-07-18 16:52:22,608;Component added, lb increment: 23.0
+INFO;2023-07-18 16:52:22,617;Component added, lb increment: 217.0
+INFO;2023-07-18 16:52:22,624;Component added, lb increment: 187.0
+INFO;2023-07-18 16:52:22,630;Component added, lb increment: 294.0
+INFO;2023-07-18 16:52:22,634;Component added, lb increment: 169.0
+INFO;2023-07-18 16:52:22,638;Component added, lb increment: -12.0
+INFO;2023-07-18 16:52:22,640;Component added, lb increment: 111.0
+INFO;2023-07-18 16:52:22,642;Component added, lb increment: 30.0
+INFO;2023-07-18 16:52:22,643;Component added, lb increment: 111.0
+INFO;2023-07-18 16:52:22,644;Component added, lb increment: 53.0
+INFO;2023-07-18 16:52:22,644;Component added, lb increment: 9.0
+INFO;2023-07-18 16:52:22,644;Component added, lb increment: 55.0
+INFO;2023-07-18 16:52:22,644;Component added, lb increment: 207.0
+INFO;2023-07-18 16:52:22,644;Component added, lb increment: 161.0
+INFO;2023-07-18 16:52:22,644;Component added, lb increment: 0
+DEBUG;2023-07-18 16:52:22,673;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:22,702;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:22,730;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:22,758;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:22,787;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:22,815;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:22,844;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:22,872;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:22,901;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:22,929;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:22,957;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:22,986;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:23,014;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:23,042;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:23,071;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:23,100;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:23,128;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:23,156;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:23,185;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:23,213;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:23,242;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:23,270;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:23,299;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:23,328;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:23,356;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:23,384;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:23,413;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:23,441;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:23,469;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:23,497;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:23,526;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:23,554;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:23,582;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:23,610;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:23,638;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:23,666;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:23,695;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:23,723;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:23,752;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:23,780;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:23,808;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:23,837;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:23,866;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:23,894;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:23,923;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:23,951;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:23,980;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:24,008;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:24,037;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:24,065;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:24,093;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:24,122;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:24,151;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:24,179;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:24,208;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:24,236;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:24,265;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:24,293;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:24,322;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:24,350;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:24,378;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:24,407;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:24,436;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:24,464;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:24,492;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:24,520;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:24,549;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:24,577;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:24,605;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:24,634;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:24,662;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:24,691;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:24,719;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:24,748;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:24,777;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:24,805;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:24,834;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:24,863;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:24,891;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:24,920;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:24,949;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:24,977;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:25,005;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:25,034;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:25,063;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:25,091;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:25,119;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:25,148;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:25,176;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:25,205;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:25,234;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:25,262;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:25,291;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:25,319;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:25,348;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:25,376;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:25,405;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:25,433;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:25,462;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:25,490;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:25,518;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:25,546;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:25,575;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:25,603;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:25,631;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:25,660;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:25,689;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:25,717;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:25,745;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:25,774;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:25,802;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:25,831;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:25,859;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:25,888;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:25,916;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:25,944;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:25,973;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:26,002;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:26,030;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:26,059;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:26,087;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:26,116;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:26,144;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:26,173;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:26,201;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:26,229;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:26,258;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:26,286;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:26,315;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:26,344;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:26,372;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:26,401;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:26,429;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:26,458;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:26,486;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:26,514;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:26,543;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:26,571;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:26,599;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:26,628;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:26,656;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:26,684;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:26,713;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:26,741;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:26,769;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:26,798;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:26,826;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:26,854;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:26,883;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:26,911;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:26,939;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:26,967;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:26,995;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:27,024;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:27,052;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:27,081;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:27,109;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:27,137;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:27,165;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:27,193;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:27,222;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:27,250;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:27,278;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:27,307;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:27,336;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:27,364;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:27,393;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:27,421;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:27,450;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:27,478;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:27,506;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:27,535;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:27,563;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:27,592;Improvement found: -444.0
+DEBUG;2023-07-18 16:52:27,621;Improvement found: -435.0
+DEBUG;2023-07-18 16:52:27,644;Improvement found: -212.0
+INFO;2023-07-18 16:52:27,644;Objective: 5718.000
+INFO;2023-07-18 16:52:27,644;Elapsed solving time: 10.5420

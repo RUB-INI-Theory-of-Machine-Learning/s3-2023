@@ -1,0 +1,146 @@
+INFO;2023-07-18 16:53:13,723;Component added, lb increment: 52.0
+INFO;2023-07-18 16:53:16,919;Component added, lb increment: 5.0
+INFO;2023-07-18 16:53:20,047;Component added, lb increment: 102.0
+INFO;2023-07-18 16:53:23,051;Component added, lb increment: 16.0
+INFO;2023-07-18 16:53:25,960;Component added, lb increment: 27.0
+INFO;2023-07-18 16:53:28,790;Component added, lb increment: 35.0
+INFO;2023-07-18 16:53:31,550;Component added, lb increment: 12.0
+INFO;2023-07-18 16:53:34,236;Component added, lb increment: -16.0
+INFO;2023-07-18 16:53:36,817;Component added, lb increment: 22.0
+INFO;2023-07-18 16:53:39,338;Component added, lb increment: 67.0
+INFO;2023-07-18 16:53:41,771;Component added, lb increment: 54.0
+INFO;2023-07-18 16:53:44,141;Component added, lb increment: 44.0
+INFO;2023-07-18 16:53:46,410;Component added, lb increment: 66.0
+INFO;2023-07-18 16:53:48,606;Component added, lb increment: 63.0
+INFO;2023-07-18 16:53:50,723;Component added, lb increment: 6.0
+INFO;2023-07-18 16:53:52,803;Component added, lb increment: 13.0
+INFO;2023-07-18 16:53:54,812;Component added, lb increment: 54.0
+INFO;2023-07-18 16:53:56,703;Component added, lb increment: -3.0
+INFO;2023-07-18 16:53:58,533;Component added, lb increment: 11.0
+INFO;2023-07-18 16:54:00,314;Component added, lb increment: 29.0
+INFO;2023-07-18 16:54:02,053;Component added, lb increment: 40.0
+INFO;2023-07-18 16:54:03,743;Component added, lb increment: 7.0
+INFO;2023-07-18 16:54:05,338;Component added, lb increment: 268.0
+INFO;2023-07-18 16:54:06,892;Component added, lb increment: 68.0
+INFO;2023-07-18 16:54:08,364;Component added, lb increment: 25.0
+INFO;2023-07-18 16:54:09,797;Component added, lb increment: 32.0
+INFO;2023-07-18 16:54:11,183;Component added, lb increment: 105.0
+INFO;2023-07-18 16:54:12,510;Component added, lb increment: 9.0
+INFO;2023-07-18 16:54:13,796;Component added, lb increment: 16.0
+INFO;2023-07-18 16:54:15,046;Component added, lb increment: 19.0
+INFO;2023-07-18 16:54:16,232;Component added, lb increment: 68.0
+INFO;2023-07-18 16:54:17,382;Component added, lb increment: 17.0
+INFO;2023-07-18 16:54:18,483;Component added, lb increment: 125.0
+INFO;2023-07-18 16:54:19,553;Component added, lb increment: 20.0
+INFO;2023-07-18 16:54:20,576;Component added, lb increment: 24.0
+INFO;2023-07-18 16:54:21,526;Component added, lb increment: -2.0
+INFO;2023-07-18 16:54:22,419;Component added, lb increment: 27.0
+INFO;2023-07-18 16:54:23,262;Component added, lb increment: 46.0
+INFO;2023-07-18 16:54:24,063;Component added, lb increment: 19.0
+INFO;2023-07-18 16:54:24,813;Component added, lb increment: 52.0
+INFO;2023-07-18 16:54:25,517;Component added, lb increment: -24.0
+INFO;2023-07-18 16:54:26,191;Component added, lb increment: 29.0
+INFO;2023-07-18 16:54:26,830;Component added, lb increment: -3.0
+INFO;2023-07-18 16:54:27,435;Component added, lb increment: 104.0
+INFO;2023-07-18 16:54:28,016;Component added, lb increment: 77.0
+INFO;2023-07-18 16:54:28,559;Component added, lb increment: 145.0
+INFO;2023-07-18 16:54:29,074;Component added, lb increment: 27.0
+INFO;2023-07-18 16:54:29,570;Component added, lb increment: 210.0
+INFO;2023-07-18 16:54:30,036;Component added, lb increment: 126.0
+INFO;2023-07-18 16:54:30,486;Component added, lb increment: 116.0
+INFO;2023-07-18 16:54:30,895;Component added, lb increment: 121.0
+INFO;2023-07-18 16:54:31,279;Component added, lb increment: 125.0
+INFO;2023-07-18 16:54:31,640;Component added, lb increment: 88.0
+INFO;2023-07-18 16:54:31,987;Component added, lb increment: 35.0
+INFO;2023-07-18 16:54:32,314;Component added, lb increment: 72.0
+INFO;2023-07-18 16:54:32,626;Component added, lb increment: -13.0
+INFO;2023-07-18 16:54:32,905;Component added, lb increment: 182.0
+INFO;2023-07-18 16:54:33,165;Component added, lb increment: 65.0
+INFO;2023-07-18 16:54:33,413;Component added, lb increment: 17.0
+INFO;2023-07-18 16:54:33,643;Component added, lb increment: 37.0
+INFO;2023-07-18 16:54:33,852;Component added, lb increment: 28.0
+INFO;2023-07-18 16:54:34,045;Component added, lb increment: 78.0
+INFO;2023-07-18 16:54:34,229;Component added, lb increment: 260.0
+INFO;2023-07-18 16:54:34,399;Component added, lb increment: 55.0
+INFO;2023-07-18 16:54:34,552;Component added, lb increment: 53.0
+INFO;2023-07-18 16:54:34,692;Component added, lb increment: 72.0
+INFO;2023-07-18 16:54:34,821;Component added, lb increment: 16.0
+INFO;2023-07-18 16:54:34,938;Component added, lb increment: 44.0
+INFO;2023-07-18 16:54:35,048;Component added, lb increment: 22.0
+INFO;2023-07-18 16:54:35,145;Component added, lb increment: 107.0
+INFO;2023-07-18 16:54:35,232;Component added, lb increment: 194.0
+INFO;2023-07-18 16:54:35,312;Component added, lb increment: 215.0
+INFO;2023-07-18 16:54:35,386;Component added, lb increment: 112.0
+INFO;2023-07-18 16:54:35,450;Component added, lb increment: 133.0
+INFO;2023-07-18 16:54:35,507;Component added, lb increment: 160.0
+INFO;2023-07-18 16:54:35,558;Component added, lb increment: -9.0
+INFO;2023-07-18 16:54:35,602;Component added, lb increment: 87.0
+INFO;2023-07-18 16:54:35,641;Component added, lb increment: 75.0
+INFO;2023-07-18 16:54:35,676;Component added, lb increment: 48.0
+INFO;2023-07-18 16:54:35,706;Component added, lb increment: 151.0
+INFO;2023-07-18 16:54:35,733;Component added, lb increment: 170.0
+INFO;2023-07-18 16:54:35,755;Component added, lb increment: 105.0
+INFO;2023-07-18 16:54:35,774;Component added, lb increment: 112.0
+INFO;2023-07-18 16:54:35,789;Component added, lb increment: 91.0
+INFO;2023-07-18 16:54:35,803;Component added, lb increment: 95.0
+INFO;2023-07-18 16:54:35,814;Component added, lb increment: 336.0
+INFO;2023-07-18 16:54:35,822;Component added, lb increment: 104.0
+INFO;2023-07-18 16:54:35,830;Component added, lb increment: 129.0
+INFO;2023-07-18 16:54:35,835;Component added, lb increment: 84.0
+INFO;2023-07-18 16:54:35,840;Component added, lb increment: 130.0
+INFO;2023-07-18 16:54:35,843;Component added, lb increment: 228.0
+INFO;2023-07-18 16:54:35,845;Component added, lb increment: 205.0
+INFO;2023-07-18 16:54:35,847;Component added, lb increment: 105.0
+INFO;2023-07-18 16:54:35,848;Component added, lb increment: 94.0
+INFO;2023-07-18 16:54:35,848;Component added, lb increment: 158.0
+INFO;2023-07-18 16:54:35,849;Component added, lb increment: 211.0
+INFO;2023-07-18 16:54:35,849;Component added, lb increment: 228.0
+INFO;2023-07-18 16:54:35,849;Component added, lb increment: -118.0
+INFO;2023-07-18 16:54:35,849;Component added, lb increment: 192.0
+INFO;2023-07-18 16:54:35,849;Component added, lb increment: 0
+DEBUG;2023-07-18 16:54:35,964;Improvement found: -419.0
+DEBUG;2023-07-18 16:54:36,078;Improvement found: -597.0
+DEBUG;2023-07-18 16:54:36,192;Improvement found: -419.0
+DEBUG;2023-07-18 16:54:36,306;Improvement found: -597.0
+DEBUG;2023-07-18 16:54:36,420;Improvement found: -419.0
+DEBUG;2023-07-18 16:54:36,534;Improvement found: -597.0
+DEBUG;2023-07-18 16:54:36,649;Improvement found: -419.0
+DEBUG;2023-07-18 16:54:36,763;Improvement found: -597.0
+DEBUG;2023-07-18 16:54:36,876;Improvement found: -419.0
+DEBUG;2023-07-18 16:54:36,992;Improvement found: -597.0
+DEBUG;2023-07-18 16:54:37,107;Improvement found: -419.0
+DEBUG;2023-07-18 16:54:37,222;Improvement found: -597.0
+DEBUG;2023-07-18 16:54:37,337;Improvement found: -419.0
+DEBUG;2023-07-18 16:54:37,451;Improvement found: -597.0
+DEBUG;2023-07-18 16:54:37,566;Improvement found: -419.0
+DEBUG;2023-07-18 16:54:37,679;Improvement found: -597.0
+DEBUG;2023-07-18 16:54:37,794;Improvement found: -419.0
+DEBUG;2023-07-18 16:54:37,909;Improvement found: -597.0
+DEBUG;2023-07-18 16:54:38,025;Improvement found: -419.0
+DEBUG;2023-07-18 16:54:38,140;Improvement found: -597.0
+DEBUG;2023-07-18 16:54:38,255;Improvement found: -419.0
+DEBUG;2023-07-18 16:54:38,370;Improvement found: -597.0
+DEBUG;2023-07-18 16:54:38,487;Improvement found: -419.0
+DEBUG;2023-07-18 16:54:38,602;Improvement found: -597.0
+DEBUG;2023-07-18 16:54:38,717;Improvement found: -419.0
+DEBUG;2023-07-18 16:54:38,832;Improvement found: -597.0
+DEBUG;2023-07-18 16:54:38,947;Improvement found: -419.0
+DEBUG;2023-07-18 16:54:39,062;Improvement found: -597.0
+DEBUG;2023-07-18 16:54:39,177;Improvement found: -419.0
+DEBUG;2023-07-18 16:54:39,292;Improvement found: -597.0
+DEBUG;2023-07-18 16:54:39,406;Improvement found: -419.0
+DEBUG;2023-07-18 16:54:39,521;Improvement found: -597.0
+DEBUG;2023-07-18 16:54:39,635;Improvement found: -419.0
+DEBUG;2023-07-18 16:54:39,749;Improvement found: -597.0
+DEBUG;2023-07-18 16:54:39,865;Improvement found: -419.0
+DEBUG;2023-07-18 16:54:39,979;Improvement found: -597.0
+DEBUG;2023-07-18 16:54:40,095;Improvement found: -419.0
+DEBUG;2023-07-18 16:54:40,209;Improvement found: -597.0
+DEBUG;2023-07-18 16:54:40,324;Improvement found: -419.0
+DEBUG;2023-07-18 16:54:40,439;Improvement found: -597.0
+DEBUG;2023-07-18 16:54:40,555;Improvement found: -419.0
+DEBUG;2023-07-18 16:54:40,670;Improvement found: -597.0
+DEBUG;2023-07-18 16:54:40,786;Improvement found: -419.0
+DEBUG;2023-07-18 16:54:40,849;Improvement found: -30.0
+INFO;2023-07-18 16:54:40,849;Objective: 10645.000
+INFO;2023-07-18 16:54:40,849;Elapsed solving time: 90.4883

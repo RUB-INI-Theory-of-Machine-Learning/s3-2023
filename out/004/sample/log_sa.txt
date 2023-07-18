@@ -1,0 +1,7 @@
+INFO;2023-07-18 16:51:45,404;Component added, lb increment: -56.0
+INFO;2023-07-18 16:51:45,404;Component added, lb increment: -29.0
+INFO;2023-07-18 16:51:45,404;Component added, lb increment: 0
+INFO;2023-07-18 16:51:45,404;New best solution: 303.0
+INFO;2023-07-18 16:51:45,404;New best solution: 302.0
+INFO;2023-07-18 16:51:50,404;Objective: 302.000
+INFO;2023-07-18 16:51:50,404;Elapsed solving time: 5.0003

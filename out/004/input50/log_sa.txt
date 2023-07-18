@@ -1,0 +1,57 @@
+INFO;2023-07-18 16:53:00,189;Component added, lb increment: 12.0
+INFO;2023-07-18 16:53:00,579;Component added, lb increment: 99.0
+INFO;2023-07-18 16:53:00,946;Component added, lb increment: 115.0
+INFO;2023-07-18 16:53:01,299;Component added, lb increment: 134.0
+INFO;2023-07-18 16:53:01,630;Component added, lb increment: 129.0
+INFO;2023-07-18 16:53:01,940;Component added, lb increment: 177.0
+INFO;2023-07-18 16:53:02,235;Component added, lb increment: 36.0
+INFO;2023-07-18 16:53:02,501;Component added, lb increment: 46.0
+INFO;2023-07-18 16:53:02,747;Component added, lb increment: 75.0
+INFO;2023-07-18 16:53:02,977;Component added, lb increment: 41.0
+INFO;2023-07-18 16:53:03,195;Component added, lb increment: 44.0
+INFO;2023-07-18 16:53:03,397;Component added, lb increment: 62.0
+INFO;2023-07-18 16:53:03,585;Component added, lb increment: 52.0
+INFO;2023-07-18 16:53:03,763;Component added, lb increment: 27.0
+INFO;2023-07-18 16:53:03,927;Component added, lb increment: 14.0
+INFO;2023-07-18 16:53:04,074;Component added, lb increment: 60.0
+INFO;2023-07-18 16:53:04,208;Component added, lb increment: 139.0
+INFO;2023-07-18 16:53:04,326;Component added, lb increment: 63.0
+INFO;2023-07-18 16:53:04,435;Component added, lb increment: 116.0
+INFO;2023-07-18 16:53:04,534;Component added, lb increment: 17.0
+INFO;2023-07-18 16:53:04,624;Component added, lb increment: 82.0
+INFO;2023-07-18 16:53:04,704;Component added, lb increment: 69.0
+INFO;2023-07-18 16:53:04,777;Component added, lb increment: 84.0
+INFO;2023-07-18 16:53:04,843;Component added, lb increment: 18.0
+INFO;2023-07-18 16:53:04,901;Component added, lb increment: 40.0
+INFO;2023-07-18 16:53:04,954;Component added, lb increment: 72.0
+INFO;2023-07-18 16:53:05,000;Component added, lb increment: 45.0
+INFO;2023-07-18 16:53:05,040;Component added, lb increment: 36.0
+INFO;2023-07-18 16:53:05,076;Component added, lb increment: 228.0
+INFO;2023-07-18 16:53:05,107;Component added, lb increment: 115.0
+INFO;2023-07-18 16:53:05,132;Component added, lb increment: 80.0
+INFO;2023-07-18 16:53:05,156;Component added, lb increment: 40.0
+INFO;2023-07-18 16:53:05,175;Component added, lb increment: 157.0
+INFO;2023-07-18 16:53:05,191;Component added, lb increment: 69.0
+INFO;2023-07-18 16:53:05,206;Component added, lb increment: 48.0
+INFO;2023-07-18 16:53:05,217;Component added, lb increment: 23.0
+INFO;2023-07-18 16:53:05,226;Component added, lb increment: 217.0
+INFO;2023-07-18 16:53:05,233;Component added, lb increment: 187.0
+INFO;2023-07-18 16:53:05,239;Component added, lb increment: 294.0
+INFO;2023-07-18 16:53:05,244;Component added, lb increment: 169.0
+INFO;2023-07-18 16:53:05,247;Component added, lb increment: -12.0
+INFO;2023-07-18 16:53:05,249;Component added, lb increment: 111.0
+INFO;2023-07-18 16:53:05,251;Component added, lb increment: 30.0
+INFO;2023-07-18 16:53:05,252;Component added, lb increment: 111.0
+INFO;2023-07-18 16:53:05,253;Component added, lb increment: 53.0
+INFO;2023-07-18 16:53:05,253;Component added, lb increment: 9.0
+INFO;2023-07-18 16:53:05,253;Component added, lb increment: 55.0
+INFO;2023-07-18 16:53:05,254;Component added, lb increment: 207.0
+INFO;2023-07-18 16:53:05,254;Component added, lb increment: 161.0
+INFO;2023-07-18 16:53:05,254;Component added, lb increment: 0
+INFO;2023-07-18 16:53:05,258;New best solution: 5602.0
+INFO;2023-07-18 16:53:05,258;New best solution: 5503.0
+INFO;2023-07-18 16:53:05,259;New best solution: 5481.0
+INFO;2023-07-18 16:53:05,265;New best solution: 5377.0
+INFO;2023-07-18 16:53:05,281;New best solution: 5369.0
+INFO;2023-07-18 16:53:10,253;Objective: 5369.000
+INFO;2023-07-18 16:53:10,254;Elapsed solving time: 10.5517
