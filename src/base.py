@@ -243,6 +243,11 @@ class Solution:
         self.not_picked.remove(component.node)
 
     def connection_cost(self, last_component, new_component):
+        if last_component.node == -1:
+            return self.problem.depot_to_container[new_component.direction][new_component.node]
+        if new_component.node == self.problem.n:
+            return self.problem.container_to_plant[last_component.direction][last_component.node]
+
         # construct the direction index by concat the directions to a binary string a read it in dec
         dir_idx = int(str(last_component.direction) + str(new_component.direction), 2)
         return self.problem.container_to_container[dir_idx][last_component.node][new_component.node]
@@ -254,7 +259,12 @@ class Solution:
         Note: this invalidates any previously generated components and
         local moves.
         """
-        raise NotImplementedError
+        tmp = self.containers[lmove.i]
+        self.containers[lmove.i] = self.containers[lmove.j]
+        self.containers[lmove.j] = tmp
+
+        self.directions[lmove.i] = lmove.i_dir
+        self.directions[lmove.j] = lmove.j_dir
 
     def objective_incr_local(self, lmove: LocalMove) -> Optional[Objective]:
         """
@@ -282,25 +292,14 @@ class Solution:
         obj_value_old += self.connection_cost(Component(pc_2, pd_2), Component(cc_2, cd_2))
         obj_value_old += self.connection_cost(Component(cc_2, cd_2), Component(fc_2, fd_2))
 
+        obj_value_new = 0
+        obj_value_new += self.connection_cost(Component(pc_1, pd_1), Component(cc_2, lmove.j_dir))
+        obj_value_new += self.connection_cost(Component(cc_2, lmove.j_dir), Component(fc_1, fd_1))
+        obj_value_new += self.connection_cost(Component(pc_2, pd_2), Component(cc_1, lmove.i_dir))
+        obj_value_new += self.connection_cost(Component(cc_1, lmove.i_dir), Component(fc_2, fd_2))
 
+        return obj_value_new - obj_value_old
 
-        self.connection_cost(Component(pc_1, pd_1), Component(cc_1, cd_1))
-        self.connection_cost(Component(pc_1, pd_1), Component(cc_1, cd_1))
-        self.connection_cost(Component(self.containers[lmove.i], self.directions[lmove.i]),
-                             Component(lmove.i + 1, lmove.i + 1))
-        self.connection_cost(Component(self.containers[lmove.j - 1], self.directions[lmove.j - 1]),
-                             Component(lmove.j, lmove.j))
-        self.connection_cost(Component(self.containers[lmove.j], self.directions[lmove.j]),
-                             Component(lmove.j + 1, lmove.j + 1))
-
-        self.connection_cost(Component(self.containers[lmove.i - 1], self.directions[lmove.i - 1]),
-                             Component(lmove.j, lmove.i))
-        self.connection_cost(Component(self.containers[lmove.i], self.directions[lmove.i]),
-                             Component(lmove.i + 1, lmove.i + 1))
-        self.connection_cost(Component(self.containers[lmove.j - 1], self.directions[lmove.j - 1]),
-                             Component(lmove.j, lmove.j))
-        self.connection_cost(Component(self.containers[lmove.j], self.directions[lmove.j]),
-                             Component(lmove.j + 1, lmove.j + 1))
 
     def lower_bound_incr_add(self, component: Component) -> Optional[Objective]:
         """
