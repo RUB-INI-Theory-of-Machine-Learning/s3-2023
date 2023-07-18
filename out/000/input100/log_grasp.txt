@@ -1,0 +1,3 @@
+INFO;2023-07-17 15:48:14,658;New best solution found: 10315.0
+INFO;2023-07-17 15:48:14,658;Objective: 10315.000
+INFO;2023-07-17 15:48:14,658;Elapsed solving time: 84.5802

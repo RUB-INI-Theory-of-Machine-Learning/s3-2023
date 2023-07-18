@@ -1,0 +1,22 @@
+INFO;2023-07-17 15:30:27,393;Component added, lb increment: 52.0
+INFO;2023-07-17 15:30:27,427;Component added, lb increment: 17.0
+INFO;2023-07-17 15:30:27,447;Component added, lb increment: 42.0
+INFO;2023-07-17 15:30:27,472;Component added, lb increment: 11.0
+INFO;2023-07-17 15:30:27,493;Component added, lb increment: 40.0
+INFO;2023-07-17 15:30:27,511;Component added, lb increment: 346.0
+INFO;2023-07-17 15:30:27,528;Component added, lb increment: 72.0
+INFO;2023-07-17 15:30:27,536;Component added, lb increment: 45.0
+INFO;2023-07-17 15:30:27,548;Component added, lb increment: 56.0
+INFO;2023-07-17 15:30:27,553;Component added, lb increment: 41.0
+INFO;2023-07-17 15:30:27,556;Component added, lb increment: 194.0
+INFO;2023-07-17 15:30:27,563;Component added, lb increment: 7.0
+INFO;2023-07-17 15:30:27,565;Component added, lb increment: 101.0
+INFO;2023-07-17 15:30:27,566;Component added, lb increment: 122.0
+INFO;2023-07-17 15:30:27,567;Component added, lb increment: 127.0
+INFO;2023-07-17 15:30:27,568;Component added, lb increment: 168.0
+INFO;2023-07-17 15:30:27,568;Component added, lb increment: 64.0
+INFO;2023-07-17 15:30:27,568;Component added, lb increment: 74.0
+INFO;2023-07-17 15:30:27,568;Component added, lb increment: 78.0
+INFO;2023-07-17 15:30:27,568;Component added, lb increment: 0
+INFO;2023-07-17 15:30:27,568;Objective: 2366.000
+INFO;2023-07-17 15:30:27,568;Elapsed solving time: 0.2153
